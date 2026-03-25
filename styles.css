@@ -75,8 +75,8 @@ h1 {
     }
 
 .workout {
-    margin: 15px auto;
-    padding: 12px;
+    margin: 10px auto;
+    padding: 5px;
     background: #1e1e1e;
     border-radius: 14px;
     box-shadow: 0 6px 14px rgba(0,0,0,0.5);
@@ -95,14 +95,18 @@ textarea {
 }
 .part-select,
 .memo {
-    font-size: 1.5em;
     width: 100%;
     max-width: 260px;
-    box-sizing: border-box;
-    border-radius: 12px;
+    font-size: 1.5em;
     padding: 10px;
+    border-radius: 12px;
     border: none;
+    resize: none; /* 手動リサイズ禁止 */
+    overflow: hidden; /* スクロールバーを出さない */
+
+    line-height: 1.4;
 }
+
 .part-select {
     background-color: #2a2a2a;
     color: #ffffff;
@@ -110,7 +114,7 @@ textarea {
     appearance: none;
 }
 #save {
-    font-size: 2em;
+    font-size: 1.5em;
     padding: 14px 0;
     width: 100%;
     max-width: 260px;
