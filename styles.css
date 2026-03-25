@@ -1,0 +1,66 @@
+﻿
+body {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.calendar {
+    width: 280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+}
+
+
+#days {
+    display: contents; /* ← これが超重要 */
+}
+
+
+.day-name {
+    font-weight: bold;
+}
+
+.day {
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    position: relative;
+}
+
+    .day:hover {
+        background-color: #eef;
+    }
+
+    .day.selected {
+        background-color: #4caf50;
+        color: white;
+    }
+
+    /* ●マーク */
+    .day.has-workout::after {
+        content: "●";
+        color: red;
+        font-size: 10px;
+        position: absolute;
+        bottom: 2px;
+        right: 4px;
+    }
+
+.workout {
+    margin-top: 20px;
+}
+
+textarea {
+    width: 260px;
+    height: 80px;
+}

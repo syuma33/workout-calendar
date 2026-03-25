@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>筋トレカレンダー</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.jsonontent=" #4caf50">
+</head>
+<body>
+    <div class="calendar-header">
+        <button id="prev">＜</button>
+        <span id="monthLabel"></span>
+        <button id="next">＞</button>
+    </div>
+
+    <div class="calendar">
+        <div class="day-name">日</div>
+        <div class="day-name">月</div>
+        <div class="day-name">火</div>
+        <div class="day-name">水</div>
+        <div class="day-name">木</div>
+        <div class="day-name">金</div>
+        <div class="day-name">土</div>
+
+        <!-- 日付マスはJSで生成 -->
+        <div id="days"></div>
+    </div>
+
+    <!-- 選択日の筋トレ入力 -->
+    <div class="workout">
+        <h2 id="selectedDate">日付を選択してください</h2>
+        <textarea id="workoutText" placeholder="例：ベンチプレス 5×5&#10;スクワット 5×5"></textarea>
+        <button id="save">保存</button>
+    </div>
+
+    <script src="app.js"></script>
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            navigator.serviceWorker.register("sw.js");
+        }
+    </script>
+
+</body>
+</html>
