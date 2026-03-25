@@ -156,6 +156,14 @@ saveBtn.addEventListener("click", () => {
 
     renderCalendar();
     updateWeeklyCount();
+
+    // 入力欄を最大表示に保つ
+    memos.forEach(m => {
+        if (m.style.display === "block") {
+            m.style.height = "auto";
+            m.style.height = m.scrollHeight + "px";
+        }
+    });
 });
 
 // 月切替
@@ -169,6 +177,13 @@ nextBtn.onclick = () => {
 };
 
 renderCalendar();
+
+memos.forEach(textarea => {
+    textarea.addEventListener("input", () => {
+        textarea.style.height = "auto";
+        textarea.style.height = textarea.scrollHeight + "px";
+    });
+});
 //const daysElement = document.getElementById("days");
 //const monthLabel = document.getElementById("monthLabel");
 //const selectedDateLabel = document.getElementById("selectedDate");

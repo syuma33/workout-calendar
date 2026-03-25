@@ -2,7 +2,7 @@
 //const CACHE_NAME = "workout-calendar-v1";
 
 // after
-const CACHE_NAME = "workout-calendar-v2";
+const CACHE_NAME = "workout-calendar-v3";
 const FILES_TO_CACHE = [
     ".",
     "index.html",
