@@ -1,5 +1,135 @@
-﻿
-body {
+﻿body {
+    zoom: 2;
+    background-color: #121212;
+    color: #ffffff;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 5px;
+}
+
+#weeklyCount {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.calendar {
+    width: 280px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    background: #1e1e1e;
+    padding: 10px;
+    border-radius: 14px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.5);
+}
+
+#days {
+    display: contents;
+}
+
+.day-name {
+    font-weight: bold;
+    text-align: center;
+}
+
+.day {
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #555;
+    cursor: pointer;
+    position: relative;
+    transition: transform 0.15s;
+}
+
+    .day:hover {
+        background-color: #333;
+    }
+
+    .day:active {
+        transform: scale(0.9);
+    }
+
+    .day.selected {
+        background-color: #ffffff;
+        color: black;
+    }
+
+    .day.has-workout::after {
+        content: "●";
+        color: red;
+        position: absolute;
+        bottom: 2px;
+        right: 4px;
+        font-size: 10px;
+    }
+
+.workout {
+    margin: 15px auto;
+    padding: 12px;
+    background: #1e1e1e;
+    border-radius: 14px;
+    box-shadow: 0 6px 14px rgba(0,0,0,0.5);
+    /* ここが重要 */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 280px; /* カレンダーと幅を揃える */
+}
+
+textarea {
+    width: 260px;
+    height: 70px;
+    margin-top: 5px;
+}
+/* 2部位：左右に色分け */
+
+.day.two-parts {
+    background: linear-gradient( to bottom, var(--part-color-1) 50%, var(--part-color-2) 50% );
+    color: #000000;
+}
+
+/* 部位ごとの色 */
+.day.part-chest {
+    background-color: #f6c1c1; /* 胸 */
+    color: black;
+}
+
+.day.part-shoulder {
+    background-color: #c7dbf6; /* 肩 */
+    color: black;
+}
+
+.day.part-arm {
+    background-color: #fde2b0; /* 腕 */
+    color: black;
+}
+
+.day.part-back {
+    background-color: #dccaf3; /* 背中 */
+    color: black;
+}
+
+.day.part-leg {
+    background-color: #cfead6; /* 脚 */
+    color: black;
+}
+
+
+
+
+/*body {
     font-family: sans-serif;
     text-align: center;
 }
@@ -21,8 +151,8 @@ body {
 
 
 #days {
-    display: contents; /* ← これが超重要 */
-}
+    display: contents;*/ /* ← これが超重要 */
+/*}
 
 
 .day-name {
@@ -44,10 +174,10 @@ body {
     .day.selected {
         background-color: #4caf50;
         color: white;
-    }
+    }*/
 
     /* ●マーク */
-    .day.has-workout::after {
+    /*.day.has-workout::after {
         content: "●";
         color: red;
         font-size: 10px;
@@ -63,4 +193,4 @@ body {
 textarea {
     width: 260px;
     height: 80px;
-}
+}*/

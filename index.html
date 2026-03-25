@@ -25,11 +25,20 @@
         <!-- 日付マスはJSで生成 -->
         <div id="days"></div>
     </div>
+    
+    <!--<div id="weeklyCount">今週 0 回</div>-->
 
     <!-- 選択日の筋トレ入力 -->
     <div class="workout">
-        <h2 id="selectedDate">日付を選択してください</h2>
-        <textarea id="workoutText" placeholder="例：ベンチプレス 5×5&#10;スクワット 5×5"></textarea>
+        <h2 id="selectedDate">Please select a date</h2>
+        <!--<textarea id="workoutText" placeholder="例：ベンチプレス 5×5&#10;スクワット 5×5"></textarea>-->
+
+        <select class="part-select"></select>
+        <textarea class="memo" style="display:none;"></textarea>
+
+        <select class="part-select" style="display:none;"></select>
+        <textarea class="memo" style="display:none;"></textarea>
+
         <button id="save">保存</button>
     </div>
 
